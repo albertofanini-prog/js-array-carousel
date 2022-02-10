@@ -9,7 +9,8 @@
 
 img{
     display: block;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 /*----Section settings----*/
@@ -28,6 +29,7 @@ section{
     width: 50vw;
     height: 60vh;
     border: 2px solid red;
+    position: relative;
     /*display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -40,8 +42,15 @@ section{
     border: 1px dashed purple;*/
 }
 
-.slider_item span {
-    float: right;
+.slider_item {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 
