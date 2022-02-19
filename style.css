@@ -1,91 +1,79 @@
-/*----Reset----*/
-
+/*Reset*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
 }
-
-img{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-/*----Section settings----*/
-
-section{
-    min-height: 100vh;
-    border: 3px dashed blue;
+  
+body{
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/*----Slider principale----*/
-
-.slider_main{
-    width: 50vw;
-    height: 60vh;
-    border: 2px solid red;
-    position: relative;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;*/
-}
-
-.slider_main > *{/*
-    margin: 5px;
-    padding: 5px;
-    border: 1px dashed purple;*/
-}
-
-.slider_item {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    color: white;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.slider_main .active{
-    display: block;
-}
-
-/*----Slider secondaria - lista----*/
-
-.slider_preview{
-    width: 15vw;
-    height: 60vh;
-    border: 2px solid red;
-    position: relative;
-}
-
-.preview_item{
-    width: 100%;
-    height: 20%;
-    border: 1px solid green;
-}
-
-/*----Frecce per scorrere tra le slide----*/
-
-.arrows{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  
+img{
     width: 100%;
     height: 100%;
-    position: absolute;
-    bottom: 100%;
-    transform: translateY(100%);
-    text-align: center;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
-
-.arrows > *{
-    border: 1px solid blue;
+  
+.container{
+    width: 1000px;
+    height: 400px;
+    user-select: none;
+    /* background-color: grey; */
+    display: flex;
+    position: relative;
+}
+  
+.description{
+    padding: 15px;
+    color: white;
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+}
+  
+.description h2{
+    text-align: right;
+}
+  
+.img_full{
+    flex-grow: 1;
+    height: 100%;
+}
+  
+.img_small{
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+  
+.img_small > div{
+    height: 20%;
+    opacity: 50%;
+  }
+  
+.img_small > div.active{
+    opacity: unset;
+}
+  
+.prev, .next {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+  
+.next{
+    bottom: 0;
 }
