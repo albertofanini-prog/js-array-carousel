@@ -11,6 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #222;
 }
   
 img{
@@ -22,26 +23,39 @@ img{
 }
   
 .container{
-    width: 1000px;
-    height: 400px;
+    width: 80%;
+    height: 70%;
     user-select: none;
     /* background-color: grey; */
     display: flex;
     position: relative;
-    border: 4px solid black;
+    border: 4px solid white;
 }
   
 .description{
     padding: 10px 5px;
     color: white;
     position: absolute;
-    right: 200px;
+    right: 15%;
     bottom: 0;
     text-align: right;
+    background-color: #222;
+    width: 85%;
+    opacity: 0.8;
 }
-  
+
+.description:hover{
+    opacity: 1;
+}
+
+.description > *{
+    padding: 0px 10px;
+    opacity: 1;
+}
+
 .description h2{
     text-align: right;
+    padding-bottom: 10px;
 }
   
 .img_full{
@@ -51,7 +65,7 @@ img{
 }
   
 .img_small{
-    width: 150px;
+    width: 15%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -60,11 +74,12 @@ img{
 .img_small > div{
     height: 20%;
     opacity: 50%;
+    border: 2px solid white;
   }
   
 .img_small > div.active{
     opacity: unset;
-    border: 2px solid white;
+    border: 2px solid gold;
 }
   
 .prev, .next {
